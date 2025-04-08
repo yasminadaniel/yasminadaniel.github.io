@@ -142,3 +142,16 @@ html {
         padding: 10px;
     }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-rows: auto; /* Adjust rows automatically */
+    }
+
+    .parallax {
+        grid-column: 1; /* Adjust to single column */
+        background-attachment: scroll; /* Disable parallax on smaller screens */
+    }
+}
