@@ -10,7 +10,7 @@ html {
 
 /* Parallax Section */
 .parallax {
-    background-image: url('parallax.jpg');
+    background-image: url('overview1.svg');
     /* Replace with your image path */
     height: 100vh;
     /* Full viewport height */
