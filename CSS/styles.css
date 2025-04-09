@@ -5,7 +5,7 @@ html {
     /* Ensures the parent elements have height */
     margin: 0;
     padding: 0;
-    background-color: #172238;
+    background-color: #000000;
 }
 
 /* Parallax Section */
@@ -33,7 +33,7 @@ html {
     /* Center horizontally */
     transform: translate(-50%, -50%);
     /* Adjust for perfect centering */
-    color: #F4F3ED;
+    color: #F3EEEE;
     /* Light text color for contrast */
     text-align: center;
     font-size: 2.5rem;
@@ -46,7 +46,7 @@ html {
 
 /* Alternatively, add bottom padding to the navbar */
 #navbar {
-    background-color: #172238;
+    background-color: #4F0805;
     /* Dark shade for navbar background */
     overflow: hidden;
     padding-bottom: 10px;
@@ -65,14 +65,14 @@ html {
 }
 
 #navbar ul li a {
-    color: #F4F3ED;
+    color: #F3EEEE;
     /* Light shade for navbar links */
     text-decoration: none;
     display: block;
 }
 
 #navbar ul li a:hover {
-    background-color: #92848C;
+    background-color: #DC8C77;
     /* Light accent for hover effect */
 }
 
@@ -84,11 +84,11 @@ html {
     padding: 20px;
     margin: 20px auto;
     max-width: 1200px;
-    background-color: #F4F3ED;
+    background-color: #F3EEEE;
     /* Light shade for section background */
-    color: #172238;
+    color: #000000;
     /* Dark shade for text */
-    border: 1px solid #92848C;
+    border: 5px solid #DC8C77;
     /* Light accent for section borders */
     border-radius: 8px;
 }
@@ -96,9 +96,9 @@ html {
 /* Project Styles */
 .project {
     margin-bottom: 20px;
-    background-color: #283b63;
+    background-color: #4F0805;
     /* Main brand color for project background */
-    color: #F4F3ED;
+    color: #F3EEEE;
     /* Light shade for project text */
     padding: 15px;
     border-radius: 8px;
