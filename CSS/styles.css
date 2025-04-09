@@ -10,9 +10,9 @@ html {
 
 /* Parallax Section */
 .parallax {
-    background-image: url('NewWebsiteBanners/1.png');
+    background-image: url('WebsiteBanners1/1.png');
     /* Replace with your image path */
-    height: 100vh;
+    height: 85vh;
     /* Full viewport height */
     background-attachment: fixed;
     /* Key for parallax effect */
