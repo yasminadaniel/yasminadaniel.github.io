@@ -2,35 +2,18 @@
 body,
 html {
     height: 100%;
-    /* Ensures the parent elements have height */
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background-color: #4F0805;
+    color: #F3EEEE;
 }
 
-/* Parallax Section */
-.parallax {
-    background-image: url('WebsiteBanners1/1.png');
-    /* Replace with your image path */
-    height: 85vh;
-    /* Full viewport height */
-    background-attachment: fixed;
-    /* Key for parallax effect */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    /* Allows positioning of child elements */
-}
-
-
-/* Alternatively, add bottom padding to the navbar */
+/* Navbar */
 #navbar {
     background-color: #000000;
-    /* Dark shade for navbar background */
     overflow: hidden;
     padding-bottom: 10px;
-    /* Add padding to ensure spacing below the navbar */
 }
 
 #navbar ul {
@@ -38,6 +21,7 @@ html {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
 }
 
 #navbar ul li {
@@ -46,49 +30,38 @@ html {
 
 #navbar ul li a {
     color: #F3EEEE;
-    /* Light shade for navbar links */
     text-decoration: none;
     display: block;
 }
 
 #navbar ul li a:hover {
     background-color: #DC8C77;
-    /* Light accent for hover effect */
 }
 
-
-/* Section Styles */
-#overview,
-#skills,
-#projects {
+/* About Me Page Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
     padding: 20px;
-    margin: 20px auto;
     max-width: 1200px;
-    background-color: #F3EEEE;
-    /* Light shade for section background */
-    color: #000000;
-    /* Dark shade for text */
-    border: 5px solid #DC8C77;
-    /* Light accent for section borders */
-    border-radius: 8px;
+    margin: 0 auto; /* Center the grid */
 }
 
-/* Project Styles */
 .grid-item {
-    margin-bottom: 20px;
     background-color: #4F0805;
-    /* Main brand color for project background */
-    color: #F3EEEE;
-    /* Light shade for project text */
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     #navbar ul {
         flex-direction: column;
-        /* Stack navbar items vertically */
         align-items: center;
     }
 
@@ -97,37 +70,23 @@ html {
         width: 100%;
     }
 
-    #header h1 {
-        font-size: 1.8em;
-    }
-
-    #overview,
-    #skills,
-    #projects {
+    .grid-container {
         padding: 10px;
     }
 
+    .grid-item {
+        font-size: 1rem;
+        padding: 15px;
+    }
 }
 
 @media (max-width: 480px) {
-    #header h1 {
-        font-size: 1.5em;
+    .grid-item {
+        font-size: 0.9rem;
+        padding: 10px;
     }
 
     #navbar ul li {
         padding: 10px;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
-        grid-template-rows: auto; /* Adjust rows automatically */
-    }
-
-    .grid-item {
-        padding: 10px; /* Adjust padding for smaller screens */
-        font-size: 0.9em; /* Smaller font size for readability */
     }
 }
