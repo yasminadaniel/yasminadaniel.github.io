@@ -1,0 +1,133 @@
+/* General Reset */
+body,
+html {
+    height: 100%;
+    /* Ensures the parent elements have height */
+    margin: 0;
+    padding: 0;
+    background-color: #4F0805;
+}
+
+/* Parallax Section */
+.parallax {
+    background-image: url('WebsiteBanners1/1.png');
+    /* Replace with your image path */
+    height: 85vh;
+    /* Full viewport height */
+    background-attachment: fixed;
+    /* Key for parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* Allows positioning of child elements */
+}
+
+
+/* Alternatively, add bottom padding to the navbar */
+#navbar {
+    background-color: #000000;
+    /* Dark shade for navbar background */
+    overflow: hidden;
+    padding-bottom: 10px;
+    /* Add padding to ensure spacing below the navbar */
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar ul li {
+    padding: 14px 20px;
+}
+
+#navbar ul li a {
+    color: #F3EEEE;
+    /* Light shade for navbar links */
+    text-decoration: none;
+    display: block;
+}
+
+#navbar ul li a:hover {
+    background-color: #DC8C77;
+    /* Light accent for hover effect */
+}
+
+
+/* Section Styles */
+#overview,
+#skills,
+#projects {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #F3EEEE;
+    /* Light shade for section background */
+    color: #000000;
+    /* Dark shade for text */
+    border: 5px solid #DC8C77;
+    /* Light accent for section borders */
+    border-radius: 8px;
+}
+
+/* Project Styles */
+.grid-item {
+    margin-bottom: 20px;
+    background-color: #4F0805;
+    /* Main brand color for project background */
+    color: #F3EEEE;
+    /* Light shade for project text */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        /* Stack navbar items vertically */
+        align-items: center;
+    }
+
+    #navbar ul li {
+        text-align: center;
+        width: 100%;
+    }
+
+    #header h1 {
+        font-size: 1.8em;
+    }
+
+    #overview,
+    #skills,
+    #projects {
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    #header h1 {
+        font-size: 1.5em;
+    }
+
+    #navbar ul li {
+        padding: 10px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        grid-template-rows: auto; /* Adjust rows automatically */
+    }
+
+    .grid-item {
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Smaller font size for readability */
+    }
+}
