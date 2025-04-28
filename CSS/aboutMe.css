@@ -90,3 +90,29 @@ html {
         padding: 10px;
     }
 }
+
+/* Social Links */
+.social-links {
+    display: flex; /* Make the list horizontal */
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Add spacing between icons */
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 20px 0; /* Add spacing above and below */
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    color: #F3EEEE; /* Match the text color */
+    font-size: 1.5rem; /* Adjust icon size */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add hover effects */
+}
+
+.social-links a:hover {
+    color: #DC8C77; /* Match hover color with navbar */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
