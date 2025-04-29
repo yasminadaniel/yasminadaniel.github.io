@@ -121,6 +121,7 @@ html {
 #profile-pic {
     max-width: 80%; /* Set a maximum width */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 0; 
     margin: 20px auto; /* Center the image and add spacing */
     display: block; /* Ensure the image is centered */
 }
