@@ -1,63 +1,96 @@
 <!doctype html>
-<html lang ="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-
+    <title>Yasmina Daniel | Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
-
 <body>
-    <div id="navbar">
-        <nav>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <div class="parallax"></div>
+
+    <main class="container">
+        <!-- About Me -->
+        <section id="about" class="section">
+            <div class="about-flex">
+
+                <div>
+                    <h1>Nice To Meet You!</h1>
+                    <p>
+                        My name is Yasmina and I am an undergraduate student at Boise State University studying Games,
+                        Interactive Media and Mobile Technology with a minor in Creative Writing. My experience
+                        encompasses game
+                        development, web development, creative writing, and graphic design. I love writing intricate
+                        storylines
+                        with strong characters and stunning, imaginative worlds – especially when I get to take that
+                        vision and
+                        make it into a video game.
+                    </p>
+                    <p>
+                        My core skills include, but are not limited to, C#, HTML, CSS, JavaScript, and Blueprints. Some
+                        of my
+                        technological proficiencies include Adobe Creative Cloud, Google Suite, Visual Studio/Visual
+                        Studio
+                        Code, Unity, and Unreal Engine. In terms of non-technical skills, I have demonstrated my ability
+                        to
+                        problem-solve difficult tasks, pay close attention to detail, and be organized and time
+                        efficient.
+                    </p>
+                    <ul class="social-links">
+                        <li>
+                            <a href="mailto:minadaniel72@gmail.com" target="_blank" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/yasmina-daniel" target="_blank" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/yasminadaniel" target="_blank" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <h2>My Skills</h2>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutMe.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
+                <li>Programming: C#, HTML, CSS, JavaScript, Blueprints</li>
+                <li>Tools: Adobe Creative Cloud, Google Suite, Visual Studio/Visual Studio Code, Unity, Unreal Engine
+                </li>
+                <li>Soft Skills: Problem-solving, attention to detail, organization, time management</li>
             </ul>
-        </nav>
-    </div>
+        </section>
 
-    <div class="grid-container">
-        <div class="parallax">
-
-        </div>
-
-        <div id="overview" class="grid-item">
-            <h1>Overview</h1>
-            <p>My field of study lies in game development, web development, and creative writing. I seek to apply my
-                skills in a creative, industry environment. I enjoy working with others as well as independently.
-                Throughout my professional career I have demonstrated my ability to problem-solve difficult tasks, adapt
-                to changing environments, and gain strong attention to detail skills.</p>
-        </div>
-
-        <div id="skills" class="grid-item">
-            <h1>My Skills</h1>
-            <p>During my academic career, I have gained several skills including and not limited to C#, HTML, CSS,
-                Javascript, and Blueprints. I have also gained proficiency in a variety of applications that I have used
-                during my academic career including Adobe Creative Cloud, Visual Studio/Visual Studio Code, Unity, and
-                Unreal Engine.</p>
-        </div>
-
-        <div id="projects" class="grid-item">
-            <h1>Projects</h1>
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
             <div class="project">
                 <h3>2D Game Project</h3>
                 <p>Created a 2D Game project during my first semester in the GIMM Program. This project was done
                     individually and it was a side-scrolling Mario-like game.</p>
-                    <video controls width="100%" height="auto">
-                        <source src="Artifacts/2024-10-06 19-47-59 copy.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <video controls width="100%" height="auto">
+                    <source src="Artifacts/2024-10-06 19-47-59 copy.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div class="project">
                 <h3>AR Group Project</h3>
@@ -70,14 +103,44 @@
                 <p>This project was done during my second semester in the GIMM program. This was a group project and my
                     role was to draw up different comic panels and scenes. I provided the scenes to the animator who
                     placed the panels together and made transition animations between them.</p>
-                
-                <img src="Artifacts/Panel 1 copy.png" alt="Comic Project" class="img-fluid" loading ="lazy">
-                <img src="Artifacts/Panel 2 copy.png" alt="Comic Project" class="img-fluid" loading="lazy">
-                <img src="Artifacts/Panel 3 copy.png" alt="Comic Project" class="img-fluid" loading="lazy">
-                <img src="Artifacts/Panel４ copy.png" alt="Comic Project" class="img-fluid" loading="lazy">
+                <img src="Artifacts/Panel 1 copy.png" alt="Comic Project Panel 1" class="img-fluid" loading="lazy">
+                <img src="Artifacts/Panel 2 copy.png" alt="Comic Project Panel 2" class="img-fluid" loading="lazy">
+                <img src="Artifacts/Panel 3 copy.png" alt="Comic Project Panel 3" class="img-fluid" loading="lazy">
+                <img src="Artifacts/Panel４ copy.png" alt="Comic Project Panel 4" class="img-fluid" loading="lazy">
             </div>
-        </div>
-    </div>
+        </section>
+
+        <!-- Resume -->
+        <section id="resume" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Boise State University</strong> - Bachelor of Science in Games, Interactive Media, and
+                    Mobile Technology (Expected: 2025)</li>
+            </ul>
+            <h3>Clubs and Activities</h3>
+            <ul>
+                <li>TRIO Rising Scholars, 2022 - Present</li>
+                <li>TRIO Club Financial Officer, January 2024 - May 2024</li>
+                <li>TRIO Club Marketing Officer, August 2023 - December 2024</li>
+            </ul>
+            <h3>Club Officer Responsibilities</h3>
+            <ul>
+                <li>Creating flyers for events and posting them on social media.</li>
+                <li>Keeping the social media pages up-to-date with the latest information.</li>
+                <li>Responsible for keeping track of club funds and budgets.</li>
+                <li>Responsible for requesting funds from Student Involvement for events.</li>
+                <li>Working closely with the other officers to plan and execute various events.</li>
+                <li>Maintaining a respectful, diverse, and inclusive environment for the TRIO Club members and officers.
+                </li>
+                <li>Frequently communicating updates via E-mail and Zoom to the club advisors.</li>
+                <li>Continuously advocating transparency amongst the officers and the club advisors.</li>
+            </ul>
+            <h3>Awards</h3>
+            <ul>
+                <li>Dean’s List for Honors</li>
+            </ul>
+        </section>
+    </main>
 </body>
 
 </html>
