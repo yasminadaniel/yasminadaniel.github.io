@@ -15,6 +15,51 @@ html, body {
     background: var(--bg);
 }
 
+/* --- ADD THESE RULES HERE (prevents horizontal scroll and lets About stretch) --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* remove horizontal scrollbar caused by overflow */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ensure page never exceeds viewport width */
+.page {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* make main content area safe from horizontal overflow */
+main {
+    overflow-x: hidden;
+}
+
+/* allow the About section to stretch to the edge of the main area */
+.about-section {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding-right: 0;
+}
+
+/* ensure carousel and its track cannot cause body overflow */
+.carousel {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* ensure images never force overflow */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .page {
     display: flex;
     min-height: 100vh;
@@ -84,9 +129,6 @@ main {
     padding: 48px;
 }
 
-.about-section {
-    max-width: 720px;
-}
 
 .bio {
     line-height: 1.6;
