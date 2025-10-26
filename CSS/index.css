@@ -3,6 +3,8 @@
     --accent: #2b7a78;
     --bg: #f7f7f8;
     --text: #222;
+    --carousel-height: 110px; /* adjust as needed */
+    --carousel-speed: 24s; /* lower = faster */
 }
 
 html, body {
@@ -91,10 +93,78 @@ main {
     color: #333;
 }
 
+/* --- Carousel styles --- */
 .skills-section {
     margin-top: 28px;
 }
 
+/* container hides overflow */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    padding: 12px 6px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* track is long, moves left */
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    /* ensure items are on single row */
+    white-space: nowrap;
+    animation: marquee var(--carousel-speed) linear infinite;
+    will-change: transform;
+}
+
+/* each skill item */
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 140px;
+    background: #fff;
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(15,15,15,0.06);
+    text-align: center;
+    font-weight: 600;
+    color: #111;
+}
+
+/* logo images */
+.skill img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+}
+
+/* caption */
+.skill figcaption {
+    font-size: 0.85rem;
+    color: #333;
+}
+
+/* pause on hover */
+.carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* keyframes: move track left by half its width (since items are duplicated) */
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* fallback skills list (kept minimal) */
 .skills-list {
     list-style: none;
     padding: 0;
@@ -143,5 +213,18 @@ main {
     }
     main {
         padding: 24px;
+    }
+
+    /* make carousel items smaller on narrow screens */
+    :root {
+        --carousel-height: 86px;
+    }
+    .skill {
+        min-width: 110px;
+        padding: 8px;
+    }
+    .skill img {
+        width: 44px;
+        height: 44px;
     }
 }
