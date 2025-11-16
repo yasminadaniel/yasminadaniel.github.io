@@ -1,13 +1,29 @@
 :root {
+    /* Palette (reference):
+       --color-light       : FFDDC8  (Light shades — backgrounds for light designs)
+       --color-light-accent: A87A64  (Light accent)
+       --color-brand       : FFB0B9  (Main brand color)
+       --color-dark-accent : C1536B  (Dark accent)
+       --color-dark        : 260C09  (Dark shades — primary text / inverted backgrounds)
+    */
+    --color-light: #FFDDC8;
+    --color-light-accent: #A87A64;
+    --color-brand: #FFB0B9;
+    --color-dark-accent: #C1536B;
+    --color-dark: #260C09;
+
+    /* existing layout tokens — keep or adjust as needed */
     --sidebar-width: 260px;
-    --accent: #2b7a78;
-    --bg: #f7f7f8;
-    --text: #222;
-    --carousel-height: 110px; /* adjust as needed */
-    --carousel-speed: 24s; /* lower = faster */
+    --bg: var(--color-light);
+    /* page background uses light shade */
+    --text: var(--color-dark);
+    /* primary text uses dark shade */
+    --carousel-height: 110px;
+    --carousel-speed: 24s;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -23,7 +39,8 @@ html, body {
 }
 
 /* remove horizontal scrollbar caused by overflow */
-html, body {
+html,
+body {
     overflow-x: hidden;
     width: 100%;
 }
@@ -69,8 +86,11 @@ img {
 #sidebar {
     width: var(--sidebar-width);
     padding: 32px 20px;
-    background: #ffffff;
-    box-shadow: 2px 0 8px rgba(15,15,15,0.05);
+    background: rgba(255, 255, 255, 0.92);
+    /* subtle contrast over --color-light */
+    border-left: 4px solid rgba(193, 83, 107, 0.06);
+    /* thin accent */
+    box-shadow: 2px 0 8px rgba(15, 15, 15, 0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,8 +103,25 @@ img {
     border-radius: 50%;
     object-fit: cover;
     display: block;
-    box-shadow: 0 6px 18px rgba(43,122,120,0.12);
-    border: 4px solid #fff;
+    box-shadow: 0 6px 18px rgba(193, 83, 107, 0.12);
+    /* tint with dark-accent */
+    border: 4px solid #C1536B;
+}
+
+/* Links and interactive elements use brand color */
+a {
+    color: var(--color-dark);
+    /* default links dark for readability */
+}
+
+a.primary,
+.banner-home {
+    color: #fff;
+    background: var(--color-brand);
+    padding: 8px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .sidebar-name {
@@ -92,7 +129,7 @@ img {
     font-size: 1.25rem;
     font-weight: 600;
     text-align: center;
-    color: var(--accent);
+    color: var(--color-dark-accent);
 }
 
 /* Vertical nav under image */
@@ -109,7 +146,7 @@ img {
 
 #sidebar nav a {
     text-decoration: none;
-    color: #0f1720;
+    color: var(--color-dark);
     width: 100%;
     display: block;
     padding: 10px 14px;
@@ -119,7 +156,8 @@ img {
 }
 
 #sidebar nav a:hover {
-    background: rgba(43,122,120,0.08);
+    background: var(--color-brand);
+    /* brand tint with low alpha */
     transform: translateY(-1px);
 }
 
@@ -127,6 +165,14 @@ img {
 main {
     flex: 1;
     padding: 48px;
+}
+
+/* Main content headings and important accenting */
+.about-section h1,
+.skills-section h2,
+.current-section h1 {
+    color: var(--color-dark);
+    /* strong readable heading color */
 }
 
 
@@ -144,7 +190,7 @@ main {
 .carousel {
     width: 100%;
     overflow: hidden;
-    background: transparent;
+    background: linear-gradient(180deg, rgba(168, 122, 100, 0.04), rgba(255, 176, 185, 0.02));
     padding: 12px 6px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -171,7 +217,11 @@ main {
     background: #fff;
     padding: 10px 12px;
     border-radius: 8px;
-    box-shadow: 0 6px 16px rgba(15,15,15,0.06);
+    background: #fff;
+    border: 1px solid rgba(162, 94, 100, 0.06);
+    /* soft border using palette tones */
+    box-shadow: 0 6px 16px rgba(38, 12, 9, 0.04);
+    /* soft shadow using dark shade */
     text-align: center;
     font-weight: 600;
     color: #111;
@@ -188,7 +238,7 @@ main {
 /* caption */
 .skill figcaption {
     font-size: 0.85rem;
-    color: #333;
+    color: var(--color-dark-accent);
 }
 
 /* pause on hover */
@@ -201,6 +251,7 @@ main {
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-50%);
     }
@@ -220,7 +271,7 @@ main {
     background: #fff;
     padding: 8px 12px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(15,15,15,0.04);
+    box-shadow: 0 2px 8px rgba(15, 15, 15, 0.04);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -232,6 +283,7 @@ main {
     .page {
         flex-direction: column;
     }
+
     #sidebar {
         width: 100%;
         flex-direction: row;
@@ -240,19 +292,23 @@ main {
         gap: 16px;
         padding: 16px;
     }
+
     .profile-pic {
         width: 96px;
         height: 96px;
     }
+
     #sidebar nav ul {
         flex-direction: row;
         gap: 6px;
         justify-content: flex-start;
     }
+
     #sidebar nav a {
         padding: 8px 10px;
         font-size: 0.95rem;
     }
+
     main {
         padding: 24px;
     }
@@ -261,12 +317,20 @@ main {
     :root {
         --carousel-height: 86px;
     }
+
     .skill {
         min-width: 110px;
         padding: 8px;
     }
+
     .skill img {
         width: 44px;
         height: 44px;
+    }
+
+    /* Footer / other inverted surfaces (if any) */
+    .inverted {
+        background: var(--color-dark);
+        color: var(--color-light);
     }
 }
