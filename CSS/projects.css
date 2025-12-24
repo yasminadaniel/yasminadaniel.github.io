@@ -1,0 +1,27 @@
+ .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-top: 60px;
+        }
+        .nav-item {
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .nav-item:hover {
+            transform: scale(1.08);
+        }
+        .nav-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            cursor: pointer;
+        }
+        .nav-label {
+            margin-top: 12px;
+            font-size: 1.2em;
+            color: #333;
+        }
