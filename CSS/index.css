@@ -31,7 +31,7 @@ body {
     background: var(--bg);
 }
 
-/* --- ADD THESE RULES HERE (prevents horizontal scroll and lets About stretch) --- */
+/* --- ADD THESE RULES HERE (prevents horizontal scroll and lets welcome stretch) --- */
 *,
 *::before,
 *::after {
@@ -56,8 +56,8 @@ main {
     overflow-x: hidden;
 }
 
-/* allow the About section to stretch to the edge of the main area */
-.about-section {
+/* allow the welcome section to stretch to the edge of the main area */
+.welcome-section {
     max-width: none;
     width: 100%;
     margin: 0;
@@ -168,7 +168,7 @@ main {
 }
 
 /* Main content headings and important accenting */
-.about-section h1,
+.welcome-section h1,
 .skills-section h2,
 .current-section h1 {
     color: var(--color-dark);
